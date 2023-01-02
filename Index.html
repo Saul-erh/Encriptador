@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+
+<html lang="es">
+
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title> Encriptador/Desencriptador Challenge </title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>   
+
+    <body>
+
+        <header>  
+        </header>
+        
+        <main>
+            <div class="contenedor">
+
+                <section class="Entrada-box">
+
+                    <img src="imagenes/Logo.png" class="logo">
+                    <input type="text" class="input-padron" placeholder="Ingrese el texto aqui" >
+
+                    <div class="restriccion">
+                        <p class="signo">⚠</p>
+                        <p class="restri"> Solo letras minusculas y sin acentos</p>
+                    </div>
+                    
+                    <div class="botones">
+                        <button class="boton-encriptar" onclick="EncriptarTexto()"> Encriptar </button>
+                        <button class="boton-desencriptar" onclick="DesencriptarTexto()"> Desencriptar </button>
+                    </div>
+
+                </section>
+                
+                
+                <section class="Resultado-box">
+
+                    <div  class="CuadroResultado" >
+
+                        <div id="Muestra-Resultado" >
+                            <textarea id="mensaje"></textarea>
+                            <button onclick="copiarAlPortapapeles('mensaje')" class="boton-copiar"> Copiar</button> 
+                        </div>
+                        
+                        <div id="Oculta">
+                            <img src="imagenes/Muneco.png" class="muneco">
+                            <div class="frame"> 
+                            <p class="parrafo1"> Ningún mensaje fue encotrado</p>
+                            <p class="parrafo2"> Ingresa el texto que desees encriptar o desencriptar</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+        
+                </section>
+                
+            </div>
+                
+
+        </main>
+
+        <footer>
+                
+        </footer>  
+
+        <script src="script.js"> </script>   
+
+    </body>
+
+</html>
