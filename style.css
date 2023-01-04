@@ -3,7 +3,7 @@ body{
 }
 
 main{
-    background: url(imagenes/fondo2.jpg);
+    background: url(imagenes/fondo.jpg);
     width: 100%;
 }
 
@@ -63,7 +63,7 @@ main{
 
     /* Dark blue/dark-blue-300 */
     color: #0A3871;
-    background: url(imagenes/fondo2.jpg);
+    background: url(imagenes/fondo.jpg);
 
     /*into flex Entrada-box*/
     flex: none;
@@ -380,8 +380,10 @@ main{
 
 footer{ 
     text-align: center;
-    background: url(imagenes/fondo.jpg);
+    background: url(imagenes/bg.jpg);
     padding: 40px 0;
+    font-weight: bold;
+    color: white;
 }
 
 @media screen and (max-width:768px){
