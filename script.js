@@ -5,7 +5,7 @@
         if(resultado == false){
             input.value = "";
         }
-        input.focus();
+     //   input.focus();
 
     return input;
     }
