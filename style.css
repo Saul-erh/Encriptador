@@ -2,13 +2,16 @@ body{
     font-family: 'Montserrat', sans-serif; 
 }
 
-.contenedor{
-    position: absolute;
-    width: 1024px;
-    height: 512px;
-    margin: 0 auto;
-    background: url(imagenes/fondo2.jpg);;
+main{
+    background: url(imagenes/fondo2.jpg);
+    width: 100%;
+    
+}
 
+.contenedor{
+    width: 940px;
+    margin: 0 auto;
+    
     /* flex contenedor*/
     display: flex;
     flex-direction: row;
@@ -21,12 +24,12 @@ body{
     position: relative;
     width: 65%;
     height: 512px;
+
     /* flex Entrada-box*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    /*gap: 20px;
 
     /*into flex contenedor*/
     flex: none;
@@ -39,7 +42,7 @@ body{
     width: 100px; 
     height: 30px; 
     top: 20px;
-    left: 20px;
+    
 
     /*into flex Entrada-box*/
     flex: none;
@@ -51,8 +54,8 @@ body{
 .input-padron{
     position: relative;
     width: 500px;
-    height: 30px;
-    left: 120px;
+    height: 250px;
+    left: 100px;
     top: 40px;
     border: none;
 
@@ -85,8 +88,8 @@ body{
     position: relative;
     width: 230px;
     height: 18px;
-    left: 120px;
-    top: 300px;
+    left: 100px;
+    top: 90px;
 /*into flex Entrada-box*/
     flex: none;
     order: 2;
@@ -132,11 +135,11 @@ body{
     padding: 0px;
     gap: 40px;
 
-    position: relative;
+    position: relative; 
     width: 500px;
     height: 60px;
-    left: 120px;
-    top: 310px;
+    left: 100px;
+    top: 100px;
 /*into flex Entrada-box*/
     flex: none;
     order: 3;
@@ -199,7 +202,7 @@ body{
 
 .Resultado-box{
     width: 35%; 
-    height: 512px; 
+    height: 512px;
 
     /*flex Resultado-box*/
     display: flex;
@@ -254,15 +257,29 @@ body{
    
     font-size: 24px;
     line-height: 150%;
-    /* identical to box height, or 48px */
 
     color: #0A3871;
-    
     border: none;
 
     /*into flex CuadroResultado*/
     flex: none;
     order: 0;
+    flex-grow: 0;
+}
+
+.btnFrame{
+    /* flex btnFrame */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 40px;
+
+    width: 200px;
+    height: 50px;
+
+    /*into flex CuadroResultado*/
+    flex: none;
+    order: 3;
     flex-grow: 0;
 }
 
@@ -272,10 +289,10 @@ body{
     border: 1px solid #0A3871; /* Dark blue*/
     border-radius: 24px; 
 
-    position: relative; 
     width: 200px;
     height: 50px;
-    left: 40px;
+    margin: 0 auto; 
+    
     top: 10px;
  
     background: #D8DFE8; /* Light gray */
@@ -287,9 +304,9 @@ body{
 
     cursor: pointer;
 
-    /*into flex CuadroResultado*/
+    /*into flex btnFrame*/
     flex: none;
-    order: 3;
+    order: 0;
     flex-grow: 0;
 }
 
@@ -332,7 +349,6 @@ body{
 
 .parrafo1{
     /* Ningún mensaje fue encontrado */
-
     font-weight: 700; 
     font-size: 18px;
     line-height: 120%;
@@ -349,7 +365,6 @@ body{
 
 .parrafo2{
     /* Ingresa el texto que desees encriptar o desencriptar. */
-
     font-size: 14px;
     line-height: 150%;
     text-align: center;
@@ -364,6 +379,11 @@ body{
    
 }
 
+footer{ 
+    text-align: center;
+    background: url(imagenes/fondo.jpg);
+    padding: 40px 0;
+}
 
 @media screen and (max-width:768px){
     .contenedor{
@@ -372,33 +392,38 @@ body{
     }
     .Entrada-box, .Resultado-box{
         width: 100%;
-        background: url(imagenes/fondo2.jpg);
     }   
-    .input-padron, .restriccion, .botones, .boton-encriptar, .boton-desencriptar{
+    .input-padron, .botones {
+        width: 65%; 
+        left: 10%;
+        gap: 10%;
+    }  
+    .boton-encriptar, .boton-desencriptar{
         width: 60%;
+        font-size: 100%; 
+    } 
+    .restriccion{
+        width: 30%;
         font-size: 100%;
         left: 10%;
     }
-    
     .CuadroResultado{
         width: 75%;
     } 
-    #mensaje{
+    #mensaje, #Muestra-Resultado{
         width: 95%;    
     } 
     .frame{
         width: 75%;
-        height: 100px;
-        top: 20px;
-        left: 15%;
-         
+        height: 100%;
+        top: 20%;
+        left: 15%;    
     }
-   .boton-copiar{
-        left: 20%;
-        width: 60%;
-        font-size: 100%;
-   } 
+    .btnFrame{
+        width: 100%;
+        padding: 5% 0;
+    }
    .muneco{
-    display: none;
+        display: none;
    }
 }

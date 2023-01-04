@@ -13,7 +13,7 @@
 
     <body>
 
-        <header>  
+        <header>   
         </header>
         
         <main>
@@ -22,7 +22,7 @@
                 <section class="Entrada-box">
 
                     <img src="imagenes/Logo.png" class="logo">
-                    <input type="text" class="input-padron" placeholder="Ingrese el texto aqui" >
+                    <textarea class="input-padron" placeholder="Ingrese el texto aqui..."></textarea>
 
                     <div class="restriccion">
                         <p class="signo">⚠</p>
@@ -43,7 +43,9 @@
 
                         <div id="Muestra-Resultado" >
                             <textarea id="mensaje"></textarea>
+                            <div class="btnFrame">
                             <button onclick="copiarAlPortapapeles('mensaje')" class="boton-copiar"> Copiar</button> 
+                            </div>
                         </div>
                         
                         <div id="Oculta">
@@ -64,7 +66,11 @@
         </main>
 
         <footer>
-                
+            <p><strong> Desarrollador:</strong> Saúl Emmanuel Reyes Hernández</p>
+            <p>Contacto: saul.sdrh@gmail.com</p>
+            <p>Github: Saul-erh</p>
+            <p>Linkedin: Saúl Reyes</p>
+            <p class= "copyright">&copy Copyright Encriptador Challenge  </p>       
         </footer>  
 
         <script src="script.js"> </script>   

@@ -1,6 +1,6 @@
     function ObtenerTexto(){
 
-    var input = document.querySelector("input");
+    var input = document.querySelector(".input-padron");
     var resultado = VerificaRestriccion(input.value);
         if(resultado == false){
             input.value = "";
@@ -12,7 +12,7 @@
 
     function VerificaRestriccion(texto){
         
-        var patron=/[a-z ]/g;
+        var patron=/[a-z \n]/g;
         var aceptar = false;
         res = texto.match(patron);
        
@@ -90,7 +90,7 @@
     var salida = input.value;
     input.value = "";
     Display("Muestra-Resultado");
-    var textarea = document.querySelector("textarea");
+    var textarea = document.getElementById("mensaje");
     textarea.value = salida;
     console.log(salida);
 
@@ -132,7 +132,7 @@
         var salida = input.value;
         input.value = "";
         Display("Muestra-Resultado");
-        var textarea = document.querySelector("textarea");
+        var textarea = document.getElementById("mensaje");
         textarea.value = salida;
         console.log(salida);
 
@@ -141,14 +141,14 @@
 
 function copiarAlPortapapeles(id_mensaje) {
 
-  var aux = document.createElement("input");
-  var textarea = document.querySelector("textarea");
-  aux.value = textarea.value;
-  aux.setAttribute("value", document.getElementById(id_mensaje).innerHTML);
-  document.body.appendChild(aux);
-  aux.select();
-  document.execCommand("copy");
-  document.body.removeChild(aux);
+    var aux = document.createElement("textarea");
+    var textarea = document.getElementById(id_mensaje);
+    aux.value = textarea.value;
+    aux.setAttribute("value", textarea.innerHTML);
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand("copy");
+    document.body.removeChild(aux);
 
 }
 
